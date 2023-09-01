@@ -1,6 +1,6 @@
 <div align="center">
 <p> </p>
-  <img src="https://raw.githubusercontent.com/NotReeceHarris/spino.js/e2c1c8cb5f899be322fbc345b40567fb4bd6fc4b/spino-logo.svg" width="40%"/>
+  <img src="https://github.com/NotReeceHarris/spino.js/blob/main/spino-logo.png?raw=true" width="40%"/>
 </div>
 
 ##
