@@ -21,11 +21,7 @@ const spinojs = require('spino.js')
 ```
 
 ## Licensing
-```
-                    GNU AFFERO GENERAL PUBLIC LICENSE
-                       Version 3, 19 November 2007
 
-   Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
-     Everyone is permitted to copy and distribute verbatim copies
-      of this license document, but changing it is not allowed.
-```
+Applied License | Analysed License
+--- | ---
+AGPL-3.0 | [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNotReeceHarris%2Fspino.js.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FNotReeceHarris%2Fspino.js?ref=badge_large)
