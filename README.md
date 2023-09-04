@@ -8,15 +8,16 @@
 <h2 align="center">
   <img src="https://img.shields.io/npm/v/spino.js?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="npm">
   <img src="https://img.shields.io/github/license/notreeceharris/spino.js?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="GitHub">
+  <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/NotReeceHarris/spino.js/github-code-scanning%2Fcodeql?style=for-the-badge&label=CodeQL&labelColor=%23313531&color=%23f1e845">
   <p> </p>
 </h2>
 
 ```py
-# Download CLI globally
-npm i -g spino.js@latest
-
 # Install module package
 npm i spino.js@latest
+
+# Require the package
+const spinojs = require('spino.js')
 ```
 
 ## Licensing
