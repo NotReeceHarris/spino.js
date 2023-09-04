@@ -1,1 +1,3 @@
-// This is a placeholder package
+module.exports = {
+    aes: require('./src/aes')
+}
