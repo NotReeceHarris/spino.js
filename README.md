@@ -1,9 +1,9 @@
 <div align="center">
-<p> </p>
+  <p></p>
   <img src="https://github.com/NotReeceHarris/spino.js/blob/main/spino-logo.png?raw=true" width="40%"/>
+  <p></p>
+  <p>Currently a placeholder</p>
 </div>
-
-##
 
 <h2 align="center">
   <img src="https://img.shields.io/npm/v/spino.js?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="npm">
