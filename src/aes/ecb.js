@@ -1,11 +1,3 @@
-/*
-AES-ECB (Electronic Codebook Mode)
-
-This is the basic mode of AES encryption. It encrypts 
-each block of data independently, which can lead to some 
-security vulnerabilities if used incorrectly.
-*/
-
 const crypto = require('crypto');
 
 const genkey = (encoding="hex") => {

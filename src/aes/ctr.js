@@ -1,11 +1,3 @@
-/*
-AES-CTR (Counter Mode)
-
-CTR mode also turns AES into a stream cipher but uses 
-a counter instead of an initialization vector (IV) to 
-produce the keystream.
-*/
-
 const crypto = require('crypto');
 
 const genkey = (encoding="hex") => {

@@ -1,11 +1,3 @@
-/*
-AES-CBC-HMAC (Cipher Block Chaining Mode with Hash-based message authentication code)
-
-This mode adds an XOR operation with the previous block's 
-ciphertext before encryption. It is more secure than 
-ECB because it introduces a level of dependency between blocks.
-*/
-
 const crypto = require('crypto');
 
 const genkey = (encoding="hex") => {

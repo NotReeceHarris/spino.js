@@ -1,11 +1,3 @@
-/*
-AES-CFB (Cipher Feedback Mode)
-
-In CFB mode, the previous ciphertext block is encrypted 
-and then XORed with the plaintext to produce the 
-ciphertext for the current block.
-*/
-
 const crypto = require('crypto');
 
 const genkey = (encoding="hex") => {

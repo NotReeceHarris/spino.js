@@ -1,11 +1,3 @@
-/*
-AES-OFB (Output Feedback Mode)
-
-OFB mode turns the block cipher into a stream cipher, 
-generating a keystream that is XORed with the plaintext 
-to produce the ciphertext.
-*/
-
 const crypto = require('crypto');
 
 const genkey = (encoding="hex") => {

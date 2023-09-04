@@ -1,9 +1,10 @@
 const crypto = require('crypto');
+const {default: {algorithm, mode}} = require('cryptian');
 
-const genkey = (encoding="hex") => {
+const genkey = (encoding="hex", size=56) => {
 
-    const key = crypto.randomBytes(32)
-    const iv = crypto.randomBytes(16)
+    const key = crypto.randomBytes(size)
+    const iv = crypto.randomBytes(8)
 
     return {
         [encoding]: {
@@ -20,6 +21,7 @@ const genkey = (encoding="hex") => {
 }
 
 const encrypt = (plaintext, key, iv, encoding="hex") => {
+
     if (!Buffer.isBuffer(key)) {
         try {
             key = Buffer.from(key, encoding)
@@ -36,14 +38,17 @@ const encrypt = (plaintext, key, iv, encoding="hex") => {
         }
     }
 
-    const cipher = crypto.createCipheriv('aes-256-cfb1', key, iv);
-    let encryptedData = cipher.update(plaintext, 'utf8', encoding);
-    encryptedData += cipher.final(encoding);
+    const bf = new algorithm.Blowfish();
+    bf.setKey(key);
 
-    return encryptedData
+    const cipher = new mode.cbc.Cipher(bf, iv);
+
+    console.log(cipher.transform.apply(8))
+
+    return cipher.getBlockSize()
 }
 
-const decrypt = (encryptedData, key, iv, encoding="hex") => {
+const decrypt = (encryptedData, key, encoding="hex") => {
 
     if (!Buffer.isBuffer(key)) {
         try {
@@ -53,19 +58,10 @@ const decrypt = (encryptedData, key, iv, encoding="hex") => {
         }
     }
 
-    if (!Buffer.isBuffer(iv)) {
-        try {
-            iv = Buffer.from(iv, encoding)
-        } catch (error) {
-            throw new Error('Mismatched encoding types when passing iv')
-        }
-    }
+    const blowfish = new algorithm.Blowfish();
 
-    const decipher = crypto.createDecipheriv('aes-256-cfb1', key, iv);
-    let decryptedData = decipher.update(encryptedData, encoding, 'utf8');
-    decryptedData += decipher.final('utf8');
-
-    return decryptedData
+    blowfish.setKey(key);
+    return blowfish.decrypt(Buffer.from(encryptedData, encoding))
 }
 
 module.exports = {genkey, encrypt, decrypt}
