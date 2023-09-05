@@ -1,24 +1,33 @@
 const crypto = require('crypto');
-const {isValidPublicKey, isValidPrivateKey} = require('../utils/rsa');
+const {isValidPublicKey, isValidPrivateKey, keyConfig} = require('../utils/rsa');
 
+/**
+ * Calculates the SHA-384 hash of the given data.
+ * @param {string | Buffer} data - The data to be hashed.
+ * @param {string} [encoding='hex'] - The encoding for the hash output (default is 'hex').
+ * @returns {string} The SHA-384 hash of the input data in the specified encoding.
+*/
 const sha384 = (data, encoding='hex') => {
 	return crypto.createHash('sha384').update(data).digest(encoding);
 };
 
+/**
+ * Calculates the SHA-384 hash of the given data and performs RSA encryption using provided keys.
+ * @param {string | Buffer} data - The data to be hashed.
+ * @param {string | Buffer | null} [publickey=null] - The public RSA key for encryption (default is null).
+ * @param {string | Buffer | null} [privatekey=null] - The private RSA key for encryption (default is null).
+ * @param {string} [encoding='hex'] - The encoding for the hash output (default is 'hex').
+ * @returns {{
+ *   hash: string,
+ *   publickey: string | Buffer,
+ *   privatekey: string | Buffer
+ * }} An object containing the SHA-384 hash of the input data, public key, and private key.
+ * @throws {Error} Throws an error if either the public key or private key is invalid.
+*/
 const sha384rsa = (data, publickey=null, privatekey=null, encoding='hex') => {
 
 	if (publickey === null || privatekey === null) {
-		const keys = crypto.generateKeyPairSync('rsa', {
-			modulusLength: 2048,
-			publicKeyEncoding: {
-				type: 'spki',
-				format: 'pem',
-			},
-			privateKeyEncoding: {
-				type: 'pkcs8',
-				format: 'pem',
-			},
-		});
+		const keys = crypto.generateKeyPairSync('rsa', keyConfig);
         
 		publickey = keys.publicKey;
 		privatekey = keys.privateKey;

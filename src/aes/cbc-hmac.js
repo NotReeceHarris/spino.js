@@ -1,24 +1,38 @@
 const crypto = require('crypto');
+const keylib = require('../utils/keys');
 
+/**
+ * Generates a random key and initialization vector (IV) for encryption.
+ * @param {string} [encoding='hex'] - The encoding for the generated key and IV (default is 'hex').
+ * @returns {{
+ *   [encoding]: {
+ *     key: string,
+ *     iv: string
+ *   },
+ *   buffer: {
+ *     key: Buffer,
+ *     iv: Buffer
+ *   },
+ *   key: Buffer,
+ *   iv: Buffer
+ * }} An object containing the generated key and IV in various formats.
+*/
 const genkey = (encoding='hex') => {
-
-	const key = crypto.randomBytes(32);
-	const iv = crypto.randomBytes(16);
-
-	return {
-		[encoding]: {
-			key: key.toString(encoding),
-			iv: iv.toString(encoding)
-		},
-		buffer: {
-			key,
-			iv
-		},
-		key,
-		iv
-	};
+	return keylib(32, 16, encoding);
 };
 
+/**
+ * Encrypts plaintext using the specified key and IV.
+ * @param {string} plaintext - The plaintext to be encrypted.
+ * @param {Buffer | string} key - The encryption key (either as a Buffer or encoded string).
+ * @param {Buffer | string} iv - The initialization vector (IV) (either as a Buffer or encoded string).
+ * @param {string} [encoding='hex'] - The encoding for the encrypted data and HMAC digest (default is 'hex').
+ * @returns {{
+ *   encrypted: string,
+ *   hmacDigest: string
+ * }} An object containing the encrypted data and HMAC digest.
+ * @throws {Error} Throws an error if the encoding types for key or IV are mismatched.
+*/
 const encrypt = (plaintext, key, iv, encoding='hex') => {
 	if (!Buffer.isBuffer(key)) {
 		try {
@@ -50,6 +64,16 @@ const encrypt = (plaintext, key, iv, encoding='hex') => {
 	};
 };
 
+/**
+ * Decrypts encrypted data using the specified key and IV and verifies the HMAC digest.
+ * @param {string} encryptedData - The encrypted data to be decrypted.
+ * @param {Buffer | string} key - The decryption key (either as a Buffer or encoded string).
+ * @param {Buffer | string} iv - The initialization vector (IV) (either as a Buffer or encoded string).
+ * @param {string} hmacDigest - The HMAC digest to be verified.
+ * @param {string} [encoding='hex'] - The encoding for the encrypted data and HMAC digest (default is 'hex').
+ * @returns {string | false} The decrypted plaintext if HMAC verification succeeds, or false if verification fails.
+ * @throws {Error} Throws an error if the encoding types for key or IV are mismatched.
+*/
 const decrypt = (encryptedData, key, iv, hmacDigest, encoding='hex') => {
 
 	if (!Buffer.isBuffer(key)) {

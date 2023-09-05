@@ -1,8 +1,6 @@
 const spinojs = require('./index');
 const plaintext = 'Hello, Spino.js';
 
-console.log(spinojs.sha);
-
 // AES
 (() => {
 	const aes = spinojs.aes;
@@ -190,7 +188,7 @@ console.log(spinojs.sha);
         decrypted   : ${decrypted}
         `);
 	})();
-});
+})();
 
 // Blowfish
 (() => {
@@ -288,9 +286,9 @@ const hashes = [
 	'ssl3-sha1'
 ];
 
-
 // eslint-disable-next-line no-unused-vars
-const algos = [ 'CAST-cbc',
+const algos = [ 
+	'CAST-cbc',
 	'aes128',
 	'aes192',
 	'aes256',
@@ -369,4 +367,5 @@ const algos = [ 'CAST-cbc',
 	'seed-cbc',
 	'seed-cfb',
 	'seed-ecb',
-	'seed-ofb' ];
+	'seed-ofb' 
+];
