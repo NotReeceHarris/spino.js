@@ -26,6 +26,14 @@ npm i spino.js@latest
 # Require the package
 const spinojs = require('spino.js')
 ```
+## Key Features
+
+🔒 **Assured Security**: Prioritizing your data's safety. \
+🧂 **Simple Hash Salting**: Easy and effective protection. \
+✅ **Industry-Compliant Algorithms**: Meeting regulatory standards. \
+💨 **Fast and Easy Implementation**: Swift integration. \
+👐 **Open-Source**: Collaborative and transparent development. \
+🕷 **Vulnerability Monitoring**: Continuous code scrutiny. \
 
 
 ## Supported Algorithms
