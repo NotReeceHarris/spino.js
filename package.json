@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/NotReeceHarris/spino.js/issues"
   },
-  "homepage": "https://github.com/NotReeceHarris/spino.js#readme"
+  "homepage": "https://github.com/NotReeceHarris/spino.js#readme",
+  "dependencies": {
+    "cryptian": "^0.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0"
+  }
 }

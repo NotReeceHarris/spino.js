@@ -1,79 +1,71 @@
-/*
-AES-CFB (Cipher Feedback Mode)
-
-In CFB mode, the previous ciphertext block is encrypted 
-and then XORed with the plaintext to produce the 
-ciphertext for the current block.
-*/
-
 const crypto = require('crypto');
 
-const genkey = (encoding="hex") => {
+const genkey = (encoding='hex') => {
 
-    const key = crypto.randomBytes(32)
-    const iv = crypto.randomBytes(16)
+	const key = crypto.randomBytes(32);
+	const iv = crypto.randomBytes(16);
 
-    return {
-        [encoding]: {
-            key: key.toString(encoding),
-            iv: iv.toString(encoding)
-        },
-        buffer: {
-            key,
-            iv
-        },
-        key,
-        iv
-    }
-}
+	return {
+		[encoding]: {
+			key: key.toString(encoding),
+			iv: iv.toString(encoding)
+		},
+		buffer: {
+			key,
+			iv
+		},
+		key,
+		iv
+	};
+};
 
-const encrypt = (plaintext, key, iv, encoding="hex") => {
-    if (!Buffer.isBuffer(key)) {
-        try {
-            key = Buffer.from(key, encoding)
-        } catch (error) {
-            throw new Error('Mismatched encoding types when passing key')
-        }
-    }
+const encrypt = (plaintext, key, iv, encoding='hex') => {
+	if (!Buffer.isBuffer(key)) {
+		try {
+			key = Buffer.from(key, encoding);
+		} catch (error) {
+			throw new Error('Mismatched encoding types when passing key');
+		}
+	}
 
-    if (!Buffer.isBuffer(iv)) {
-        try {
-            iv = Buffer.from(iv, encoding)
-        } catch (error) {
-            throw new Error('Mismatched encoding types when passing iv')
-        }
-    }
+	if (!Buffer.isBuffer(iv)) {
+		try {
+			iv = Buffer.from(iv, encoding);
+		} catch (error) {
+			throw new Error('Mismatched encoding types when passing iv');
+		}
+	}
 
-    const cipher = crypto.createCipheriv('aes-256-cfb1', key, iv);
-    let encryptedData = cipher.update(plaintext, 'utf8', encoding);
-    encryptedData += cipher.final(encoding);
+	const cipher = crypto.createCipheriv('aes-256-cfb1', key, iv);
+	let encryptedData = cipher.update(plaintext, 'utf8', encoding);
+	encryptedData += cipher.final(encoding);
 
-    return encryptedData
-}
+	return encryptedData;
+};
 
-const decrypt = (encryptedData, key, iv, encoding="hex") => {
+const decrypt = (encryptedData, key, iv, encoding='hex') => {
 
-    if (!Buffer.isBuffer(key)) {
-        try {
-            key = Buffer.from(key, encoding)
-        } catch (error) {
-            throw new Error('Mismatched encoding types when passing key')
-        }
-    }
+	if (!Buffer.isBuffer(key)) {
+		try {
+			key = Buffer.from(key, encoding);
+		} catch (error) {
+			throw new Error('Mismatched encoding types when passing key');
+		}
+	}
 
-    if (!Buffer.isBuffer(iv)) {
-        try {
-            iv = Buffer.from(iv, encoding)
-        } catch (error) {
-            throw new Error('Mismatched encoding types when passing iv')
-        }
-    }
+	if (!Buffer.isBuffer(iv)) {
+		try {
+			iv = Buffer.from(iv, encoding);
+		} catch (error) {
+			throw new Error('Mismatched encoding types when passing iv');
+		}
+	}
 
-    const decipher = crypto.createDecipheriv('aes-256-cfb1', key, iv);
-    let decryptedData = decipher.update(encryptedData, encoding, 'utf8');
-    decryptedData += decipher.final('utf8');
+	const decipher = crypto.createDecipheriv('aes-256-cfb1', key, iv);
+	let decryptedData = decipher.update(encryptedData, encoding, 'utf8');
+	decryptedData += decipher.final('utf8');
 
-    return decryptedData
-}
+	return decryptedData;
+};
 
-module.exports = {genkey, encrypt, decrypt}
+module.exports = {genkey, encrypt, decrypt};
