@@ -14,12 +14,7 @@
 </h2>
 
 ```py
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNotReeceHarris%2Fspino.js.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FNotReeceHarris%2Fspino.js?ref=badge_large)
-
 # Install module package
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNotReeceHarris%2Fspino.js.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FNotReeceHarris%2Fspino.js?ref=badge_shield)
-
 npm i spino.js@latest
 
 # Require the package
