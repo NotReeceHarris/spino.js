@@ -1,5 +1,6 @@
 const spinojs = require('./index');
 const plaintext = 'Hello, Spino.js';
+const salt = 'seaSalt';
 
 // AES
 (() => {
@@ -188,7 +189,7 @@ const plaintext = 'Hello, Spino.js';
         decrypted   : ${decrypted}
         `);
 	})();
-})();
+});
 
 // Blowfish
 (() => {
@@ -218,34 +219,42 @@ const plaintext = 'Hello, Spino.js';
 
 });
 
+// SHA
 (() => {
 	const sha = spinojs.sha;
 
-	console.log('SHA1:', sha.sha1(plaintext), '\n');
-	console.log('SHA1-RSA:', sha.sha1rsa(plaintext).hash, '\n');
+	console.log('SHA1:\t\t', sha.sha1(plaintext, salt));
+	//console.log('SHA1-RSA:', sha.sha1rsa(plaintext).hash);
 
-	console.log('SHA3:', sha.sha3(plaintext), '\n');
-	console.log('SHA3-224:', sha.sha3_224(plaintext), '\n');
-	console.log('SHA3-256:', sha.sha3_256(plaintext), '\n');
-	console.log('SHA3-384:', sha.sha3_384(plaintext), '\n');
-	console.log('SHA3-512:', sha.sha3_512(plaintext), '\n');
+	console.log('SHA3:\t\t', sha.sha3(plaintext, salt));
+	console.log('SHA3-224:\t', sha.sha3_224(plaintext, salt));
+	console.log('SHA3-256:\t', sha.sha3_256(plaintext, salt));
+	console.log('SHA3-384:\t', sha.sha3_384(plaintext, salt));
+	console.log('SHA3-512:\t', sha.sha3_512(plaintext, salt));
 
-	console.log('SHA224:', sha.sha224(plaintext), '\n');
-	console.log('SHA224-RSA:', sha.sha224rsa(plaintext).hash, '\n');
+	console.log('SHA224:\t\t', sha.sha224(plaintext, salt));
+	//console.log('SHA224-RSA:', sha.sha224rsa(plaintext).hash);
 
-	console.log('SHA256:', sha.sha224(plaintext), '\n');
-	console.log('SHA256-RSA:', sha.sha256rsa(plaintext).hash, '\n');
+	console.log('SHA256:\t\t', sha.sha224(plaintext, salt));
+	//console.log('SHA256-RSA:', sha.sha256rsa(plaintext).hash);
 
-	console.log('SHA384:', sha.sha384(plaintext), '\n');
-	console.log('SHA384-RSA:', sha.sha384rsa(plaintext).hash, '\n');
+	console.log('SHA384:\t\t', sha.sha384(plaintext, salt));
+	//console.log('SHA384-RSA:', sha.sha384rsa(plaintext).hash);
 
-	console.log('SHA512:', sha.sha512(plaintext), '\n');
-	console.log('SHA512-RSA:', sha.sha512rsa(plaintext).hash, '\n');
-	console.log('SHA512-224:', sha.sha512_224(plaintext), '\n');
-	console.log('SHA512-224-RSA:', sha.sha512_224rsa(plaintext).hash, '\n');
-	console.log('SHA512-256:', sha.sha512_256(plaintext), '\n');
-	console.log('SHA512-256-RSA:', sha.sha512_256rsa(plaintext).hash, '\n');
+	console.log('SHA512:\t\t', sha.sha512(plaintext, salt));
+	//console.log('SHA512-RSA:', sha.sha512rsa(plaintext).hash);
+	console.log('SHA512-224:\t', sha.sha512_224(plaintext, salt));
+	//console.log('SHA512-224-RSA:', sha.sha512_224rsa(plaintext).hash);
+	console.log('SHA512-256:\t', sha.sha512_256(plaintext, salt));
+	//console.log('SHA512-256-RSA:', sha.sha512_256rsa(plaintext).hash);
 
+})();
+
+// Salt mix
+(() => {
+	const mix = require('./src/utils/saltmix');
+
+	console.log(mix('abcdefghijklmnopqrstuvwxyz', '1234567890'));
 });
 
 // eslint-disable-next-line no-unused-vars

@@ -1,14 +1,17 @@
 const crypto = require('crypto');
 const {isValidPublicKey, isValidPrivateKey, keyConfig} = require('../utils/rsa');
+const mix = require('../utils/saltmix');
 
 /**
  * Calculates the SHA-224 hash of the given data.
  * @param {string | Buffer} data - The data to be hashed.
+ * @param {string} salt - The salt that is used in the hash.
  * @param {string} [encoding='hex'] - The encoding for the hash output (default is 'hex').
  * @returns {string} The SHA-224 hash of the input data in the specified encoding.
 */
-const sha224 = (data, encoding='hex') => {
-	return crypto.createHash('sha224').update(data).digest(encoding);
+const sha224 = (data, salt=null, encoding='hex') => {
+	if (Buffer.isBuffer(data)) data.toString(encoding);
+	return crypto.createHash('sha224').update(mix(data, salt)).digest(encoding);
 };
 
 /**
@@ -16,6 +19,7 @@ const sha224 = (data, encoding='hex') => {
  * @param {string | Buffer} data - The data to be hashed.
  * @param {string | Buffer | null} [publickey=null] - The public RSA key for encryption (default is null).
  * @param {string | Buffer | null} [privatekey=null] - The private RSA key for encryption (default is null).
+ * @param {string} salt - The salt that is used in the hash.
  * @param {string} [encoding='hex'] - The encoding for the hash output (default is 'hex').
  * @returns {{
  *   hash: string,
@@ -24,7 +28,7 @@ const sha224 = (data, encoding='hex') => {
  * }} An object containing the SHA-224 hash of the input data, public key, and private key.
  * @throws {Error} Throws an error if either the public key or private key is invalid.
 */
-const sha224rsa = (data, publickey=null, privatekey=null, encoding='hex') => {
+const sha224rsa = (data, publickey=null, privatekey=null, salt=null, encoding='hex') => {
 
 	if (publickey === null || privatekey === null) {
 		const keys = crypto.generateKeyPairSync('rsa', keyConfig);
@@ -38,7 +42,7 @@ const sha224rsa = (data, publickey=null, privatekey=null, encoding='hex') => {
 	}
 
 	return {
-		hash:crypto.publicEncrypt({key: publickey},crypto.createHash('sha224').update(data).digest()).toString(encoding),
+		hash:crypto.publicEncrypt({key: publickey},sha224(data, salt, encoding)).toString(encoding),
 		publickey,
 		privatekey
 	};
