@@ -1,4 +1,4 @@
-const spinojs = require('./index');
+const spinojs = require('./build/index');
 const plaintext = 'Hello, Spino.js';
 const salt = 'seaSalt';
 
