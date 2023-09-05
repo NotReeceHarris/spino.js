@@ -25,7 +25,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm install
+      - run: npm install --only=dev
+      - run: npm run build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_NPM_TOKEN}}
@@ -44,7 +45,8 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
           scope: '@NotReeceHarris'
-      - run: npm install
+      - run: npm install --only=dev
+      - run: npm run build
       - name: Update package.json name
         run: sed -i '2,2s/spino.js/@NotReeceHarris\/spino.js/g' package.json
       - run: echo registry=https://npm.pkg.github.com/NotReeceHarris >> .npmrc
