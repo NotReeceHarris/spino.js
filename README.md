@@ -29,7 +29,7 @@ const spinojs = require('spino.js')
 ## Key Features
 
 - `🔒` **Assured Security**: Prioritizing your data's safety. 
-- `🧂` **[Simple Hash Salting](https://github.com/NotReeceHarris/spino.js/wiki/salting)**: Easy and effective protection. 
+- `🧂` **[Innovative Salting Algorithm](https://github.com/NotReeceHarris/spino.js/wiki/salting)**: Easy and effective protection. 
 - `✅` **Industry-Compliant Algorithms**: Meeting regulatory standards. 
 - `🏎` **Fast and Easy Implementation**: Swift integration. 
 - `👐` **Open-Source**: Collaborative and transparent development. 
