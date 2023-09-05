@@ -9,6 +9,7 @@
   <img src="https://img.shields.io/npm/v/spino.js?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="npm">
   <img src="https://img.shields.io/github/license/notreeceharris/spino.js?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="GitHub">
   <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/NotReeceHarris/spino.js/github-code-scanning%2Fcodeql?style=for-the-badge&label=CodeQL&labelColor=%23313531&color=%23f1e845">
+  <a href="#supported-algorithms"><img src="https://img.shields.io/badge/supported_algorithms-28-we?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="Static Badge"></a>
   <p> </p>
 </h2>
 
@@ -33,6 +34,27 @@ aes-ctr | `spinojs.aes.ctr()` | [/wiki/AES#ctr](https://github.com/NotReeceHarri
 aes-ecb | `spinojs.aes.ecb()` | [/wiki/AES#ecb](https://github.com/NotReeceHarris/spino.js/wiki/AES#ctr)
 aes-gcm | `spinojs.aes.gcm()` | [/wiki/AES#gcm](https://github.com/NotReeceHarris/spino.js/wiki/AES#gcm)
 aes-ofb | `spinojs.aes.ofb()` | [/wiki/AES#ofb](https://github.com/NotReeceHarris/spino.js/wiki/AES#ofb)
+ | | |
+sha1 | `spinojs.sha.sha1() ` | [/wiki/sha#sha1](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha1)
+sha1-rsa | `spinojs.sha.sha1rsa() ` | [/wiki/sha#sha1rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha1rsa)
+sha244 | `spinojs.sha.sha244() ` | [/wiki/sha#sha244](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha244)
+sha244-rsa | `spinojs.sha.sha244rsa() ` | [/wiki/sha#sha244rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha244rsa)
+sha256 | `spinojs.sha.sha256() ` | [/wiki/sha#sha256](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha256)
+sha256-rsa | `spinojs.sha.sha256rsa() ` | [/wiki/sha#sha256rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha256rsa)
+sha3 | `spinojs.sha.sha3() ` | /[wiki/sha#sha3](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha3)
+sha3-224 | `spinojs.sha.sha3_224() ` | [/wiki/sha#sha3_224](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha3_224)
+sha3-256 | `spinojs.sha.sha3_256() ` | [/wiki/sha#sha3_256](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha3_256)
+sha3-384 | `spinojs.sha.sha3_384() ` | [/wiki/sha#sha3_384](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha3_384)
+sha3-512 | `spinojs.sha.sha3_512() ` | [/wiki/sha#sha3_512](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha3_512)
+sha384 | `spinojs.sha.sha384() ` | [/wiki/sha#sha384](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha384)
+sha384-rsa | `spinojs.sha.sha384rsa() ` | [/wiki/sha#sha384rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha384rsa)
+sha512 | `spinojs.sha.sha512() ` | [/wiki/sha#sha512](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512)
+sha512-rsa | `spinojs.sha.sha512rsa() ` | [/wiki/sha#sha512rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512rsa)
+sha512-224 | `spinojs.sha.sha512_224() ` | [/wiki/sha#sha512_224](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512_224)
+sha512-224-rsa | `spinojs.sha.sha512_224rsa() ` | [/wiki/sha#sha512_224rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512_224rsa)
+sha512-256 | `spinojs.sha.sha512_256() ` | [/wiki/sha#sha512_256](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512_256)
+sha512-256-rsa | `spinojs.sha.sha512_256rsa() ` | [/wiki/sha#sha512_256rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512_256rsa)
+
 
 
 ## Licensing
