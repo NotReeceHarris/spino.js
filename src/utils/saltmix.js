@@ -33,8 +33,8 @@ module.exports = (pepper, salt) => {
 
 	const dataArray = pepper.split('');
 	const saltArray = salt.split('');
-	const dataArrayRng = sprng(dataArray.join(''), 999999999999999).toString().split('');
-	const saltArrayRng = sprng(saltArray.join(''), 999999999999999).toString().split('');
+	const dataArrayRng = sprng(dataArray.join(''), 9e20).toString().split('');
+	const saltArrayRng = sprng(saltArray.join(''), 9e20).toString().split('');
 
 	const result = [];
 	const maxLength = Math.max(dataArray.length, saltArray.length, dataArrayRng.length, saltArrayRng.length);
