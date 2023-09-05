@@ -1,6 +1,8 @@
 const spinojs = require('./index');
 const plaintext = 'Hello, Spino.js';
 
+console.log(spinojs.sha);
+
 // AES
 (() => {
 	const aes = spinojs.aes;
@@ -246,7 +248,7 @@ const plaintext = 'Hello, Spino.js';
 	console.log('SHA512-256:', sha.sha512_256(plaintext), '\n');
 	console.log('SHA512-256-RSA:', sha.sha512_256rsa(plaintext).hash, '\n');
 
-})();
+});
 
 // eslint-disable-next-line no-unused-vars
 const hashes = [
