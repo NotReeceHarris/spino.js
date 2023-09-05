@@ -46,7 +46,7 @@ jobs:
           scope: '@NotReeceHarris'
       - run: npm install
       - name: Update package.json name
-        run: sed -i '2,2s/stega.js/@NotReeceHarris\/stega.js/g' package.json
+        run: sed -i '2,2s/spino.js/@NotReeceHarris\/spino.js/g' package.json
       - run: echo registry=https://npm.pkg.github.com/NotReeceHarris >> .npmrc
       - run: npm publish
         env:
