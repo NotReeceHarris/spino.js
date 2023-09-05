@@ -9,6 +9,7 @@
   <img src="https://img.shields.io/npm/v/spino.js?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="npm">
   <img src="https://img.shields.io/github/license/notreeceharris/spino.js?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="GitHub">
   <a href="#supported-algorithms"><img src="https://img.shields.io/badge/supported_algorithms-28-we?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="Static Badge"></a>
+  <br>
   <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/471ef670bb0f49a485cc5fc8f2690ee0?style=for-the-badge&label=Codacy%20score&labelColor=%23313531&color=%23f1e845">
   <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/NotReeceHarris/spino.js/github-code-scanning%2Fcodeql?style=for-the-badge&label=CodeQL&labelColor=%23313531&color=%23f1e845">
   <p> </p>
