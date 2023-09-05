@@ -2,7 +2,6 @@
   <p></p>
   <img src="https://github.com/NotReeceHarris/spino.js/blob/main/spino-logo.png?raw=true" width="40%"/>
   <p></p>
-  <p>Harnessing the power of <a href="https://nodejs.org/api/crypto.html">crypto</a> and <a href="https://github.com/tugrul/cryptian">cryptian</a> to provide a user-friendly framework. With support for a diverse range of algorithms and industry compliances, it makes encrypting your data straightforward and secure.</p>
 </div>
 
 <h2 align="center">
@@ -15,6 +14,11 @@
   <p> </p>
 </h2>
 
+<br>
+<p>Harnessing the power of <a href="https://nodejs.org/api/crypto.html">crypto</a> and <a href="https://github.com/tugrul/cryptian">cryptian</a> to provide a user-friendly framework. With support for a diverse range of algorithms and industry compliances, it makes encrypting your data straightforward and secure.</p>
+
+##
+
 ```py
 # Install module package
 npm i spino.js@latest
@@ -22,6 +26,7 @@ npm i spino.js@latest
 # Require the package
 const spinojs = require('spino.js')
 ```
+
 
 ## Supported Algorithms
 
