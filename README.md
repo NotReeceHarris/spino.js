@@ -41,6 +41,19 @@ const spinojs = require('spino.js')
 Name | Syntax | Wiki
 --- | --- | ---
 aes-cbc | `spinojs.aes.cbc()` | [/wiki/AES#cbc](https://github.com/NotReeceHarris/spino.js/wiki/AES#cbc)
+aes-gcm | `spinojs.aes.gcm()` | [/wiki/AES#gcm](https://github.com/NotReeceHarris/spino.js/wiki/AES#gcm)
+aes-ofb | `spinojs.aes.ofb()` | [/wiki/AES#ofb](https://github.com/NotReeceHarris/spino.js/wiki/AES#ofb)
+sha1 | `spinojs.sha.sha1() ` | [/wiki/sha#sha1](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha1)
+sha512 | `spinojs.sha.sha512() ` | [/wiki/sha#sha512](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512)
+sha512-256-rsa | `spinojs.sha.sha512_256rsa() ` | [/wiki/sha#sha512_256rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512_256rsa)
+
+<details>
+
+  <summary>View all...</summary>
+
+  Name | Syntax | Wiki
+--- | --- | ---
+aes-cbc | `spinojs.aes.cbc()` | [/wiki/AES#cbc](https://github.com/NotReeceHarris/spino.js/wiki/AES#cbc)
 aes-cbc-hmac | `spinojs.aes.cbc_hmac()` | [/wiki/AES#cbc_hmac](https://github.com/NotReeceHarris/spino.js/wiki/AES#cbc_hmac)
 aes-cfb | `spinojs.aes.cfb()` | [/wiki/AES#cfb](https://github.com/NotReeceHarris/spino.js/wiki/AES#cfb)
 aes-cfb1 |  `spinojs.aes.cfb1()` | [/wiki/AES#cfb1](https://github.com/NotReeceHarris/spino.js/wiki/AES#cfb1)
@@ -71,6 +84,8 @@ sha512-256 | `spinojs.sha.sha512_256() ` | [/wiki/sha#sha512_256](https://github
 sha512-256-rsa | `spinojs.sha.sha512_256rsa() ` | [/wiki/sha#sha512_256rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512_256rsa)
 
 
+
+  </details>
 
 ## Licensing
 
