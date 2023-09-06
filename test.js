@@ -248,14 +248,14 @@ const salt = 'seaSalt';
 	console.log('SHA512-256:\t', sha.sha512_256(plaintext, salt));
 	//console.log('SHA512-256-RSA:', sha.sha512_256rsa(plaintext).hash);
 
-});
+})();
 
 // MD5
 (() => {
 	const md5 = spinojs.md5;
 
 	console.log('MD5:\t\t', md5.md5(plaintext, salt));
-	console.log('MD5-SHA1:\t', md5.sha1(plaintext, salt));
+	console.log('MD5-SHA1:\t', md5.md5sha1(plaintext, salt));
 
 })();
 
@@ -265,6 +265,14 @@ const salt = 'seaSalt';
 
 	console.log(mix('abcdefghijklmnopqrstuvwxyz', '1234567890'));
 });
+
+// HASH MIXING
+(() => {
+	const mixxer = spinojs.mixer.hashing;
+
+	console.log(mixxer(['sha1', 'sha224', 'sha256', 'sha3', 'sha3_224', 'md5sha1'], plaintext, 'base64'));
+
+})();
 
 // eslint-disable-next-line no-unused-vars
 const hashes = [

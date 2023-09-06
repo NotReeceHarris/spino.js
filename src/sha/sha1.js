@@ -11,7 +11,7 @@ const mix = require('../utils/saltmix');
 */
 const sha1 = (data, salt=null, encoding='hex') => {
 	if (Buffer.isBuffer(data)) data.toString(encoding);
-	return crypto.createHash('sha1').update(mix(data, salt)).digest(encoding);
+	return crypto.createHash('sha1').update(mix(data, salt)).digest().toString(encoding);
 };
 
 /**

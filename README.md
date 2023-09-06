@@ -84,7 +84,7 @@ sha512-256 | `spinojs.sha.sha512_256() ` | [/wiki/sha#sha512_256](https://github
 sha512-256-rsa | `spinojs.sha.sha512_256rsa() ` | [/wiki/sha#sha512_256rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512_256rsa)
  | | |
 md5 | `spinojs.md5.md5() ` | [/wiki/md5#md5](https://github.com/NotReeceHarris/spino.js/wiki/md5#md5)
-md5-sha1 | `spinojs.md5.sha1() ` | [/wiki/md5#md5_sha1](https://github.com/NotReeceHarris/spino.js/wiki/md5#sha1)
+md5-sha1 | `spinojs.md5.md5sha1() ` | [/wiki/md5#md5_sha1](https://github.com/NotReeceHarris/spino.js/wiki/md5#md5sha1)
 
 
 

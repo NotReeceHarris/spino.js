@@ -56,7 +56,7 @@ const encrypt = (plaintext, key, iv, encoding='hex') => {
 
 	const hmac = crypto.createHmac('sha1', key);
 	hmac.update(encryptedData);
-	const hmacDigest = hmac.digest('hex');
+	const hmacDigest = hmac.digest().toString(encoding);
 
 	return {
 		encrypted: encryptedData,
@@ -96,7 +96,7 @@ const decrypt = (encryptedData, key, iv, hmacDigest, encoding='hex') => {
 
 	const hmacVerification = crypto.createHmac('sha1', key);
 	hmacVerification.update(encryptedData);
-	const computedHmacDigest = hmacVerification.digest('hex');
+	const computedHmacDigest = hmacVerification.digest().toString(encoding);
 
 	if (computedHmacDigest !== hmacDigest) {
 		console.error('HMAC verification failed. The data may have been tampered with.');

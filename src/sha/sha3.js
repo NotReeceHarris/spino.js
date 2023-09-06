@@ -10,7 +10,7 @@ const mix = require('../utils/saltmix');
 */
 const sha3_224 = (data, salt=null, encoding = 'hex') => {
 	if (Buffer.isBuffer(data)) data.toString(encoding);
-	return crypto.createHash('sha3-224').update(mix(data, salt)).digest(encoding);
+	return crypto.createHash('sha3-224').update(mix(data, salt)).digest().toString(encoding);
 };
   
 /**
@@ -22,7 +22,7 @@ const sha3_224 = (data, salt=null, encoding = 'hex') => {
 */
 const sha3_256 = (data, salt=null, encoding = 'hex') => {
 	if (Buffer.isBuffer(data)) data.toString(encoding);
-	return crypto.createHash('sha3-256').update(mix(data, salt)).digest(encoding);
+	return crypto.createHash('sha3-256').update(mix(data, salt)).digest().toString(encoding);
 };
   
 /**
@@ -34,7 +34,7 @@ const sha3_256 = (data, salt=null, encoding = 'hex') => {
 */
 const sha3_384 = (data, salt=null, encoding = 'hex') => {
 	if (Buffer.isBuffer(data)) data.toString(encoding);
-	return crypto.createHash('sha3-384').update(mix(data, salt)).digest(encoding);
+	return crypto.createHash('sha3-384').update(mix(data, salt)).digest().toString(encoding);
 };
   
 /**
@@ -46,7 +46,7 @@ const sha3_384 = (data, salt=null, encoding = 'hex') => {
 */
 const sha3_512 = (data, salt=null, encoding = 'hex') => {
 	if (Buffer.isBuffer(data)) data.toString(encoding);
-	return crypto.createHash('sha3-512').update(mix(data, salt)).digest(encoding);
+	return crypto.createHash('sha3-512').update(mix(data, salt)).digest().toString(encoding);
 };
   
 const sha3 = sha3_256;
