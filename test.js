@@ -248,6 +248,15 @@ const salt = 'seaSalt';
 	console.log('SHA512-256:\t', sha.sha512_256(plaintext, salt));
 	//console.log('SHA512-256-RSA:', sha.sha512_256rsa(plaintext).hash);
 
+});
+
+// MD5
+(() => {
+	const md5 = spinojs.md5;
+
+	console.log('MD5:\t\t', md5.md5(plaintext, salt));
+	console.log('MD5-SHA1:\t', md5.md5_sha1(plaintext, salt));
+
 })();
 
 // Salt mix
