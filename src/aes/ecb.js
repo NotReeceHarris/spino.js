@@ -1,5 +1,4 @@
 const crypto = require('crypto');
-const keylib = require('../utils/keys');
 
 /**
  * Generates a random key for encryption.
@@ -15,6 +14,7 @@ const keylib = require('../utils/keys');
  * }} An object containing the generated key in various formats.
 */
 const genkey = (encoding='hex') => {
+	const keylib = require('../utils/keys');
 	return keylib(32, 0, encoding);
 };
 

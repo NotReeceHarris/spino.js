@@ -248,7 +248,7 @@ const salt = 'seaSalt';
 	console.log('SHA512-256:\t', sha.sha512_256(plaintext, salt));
 	//console.log('SHA512-256-RSA:', sha.sha512_256rsa(plaintext).hash);
 
-})();
+});
 
 // MD5
 (() => {
@@ -257,7 +257,7 @@ const salt = 'seaSalt';
 	console.log('MD5:\t\t', md5.md5(plaintext, salt));
 	console.log('MD5-SHA1:\t', md5.md5sha1(plaintext, salt));
 
-})();
+});
 
 // Salt mix
 (() => {
@@ -271,6 +271,16 @@ const salt = 'seaSalt';
 	const mixxer = spinojs.mixer.hashing;
 
 	console.log(mixxer(['sha1', 'sha224', 'sha256', 'sha3', 'sha3_224', 'md5sha1'], plaintext, 'base64'));
+
+});
+
+// BCRYPT
+(async () => {
+	const bcrypt = spinojs.bcrypt;
+
+	const hash = await bcrypt.hash(plaintext);
+
+	console.log(hash, await bcrypt.compare(plaintext, hash))
 
 })();
 

@@ -7,7 +7,7 @@
 <h2 align="center">
   <img src="https://img.shields.io/npm/v/spino.js?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="npm">
   <img src="https://img.shields.io/github/license/notreeceharris/spino.js?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="GitHub">
-  <a href="#supported-algorithms"><img src="https://img.shields.io/badge/supported_algorithms-30-we?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="Static Badge"></a>
+  <a href="#supported-algorithms"><img src="https://img.shields.io/badge/supported_algorithms-31-we?style=for-the-badge&amp;labelColor=%23313531&amp;color=%23f1e845" alt="Static Badge"></a>
   <br>
   <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/471ef670bb0f49a485cc5fc8f2690ee0?style=for-the-badge&label=Codacy%20score&labelColor=%23313531&color=%23f1e845">
   <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/NotReeceHarris/spino.js/github-code-scanning%2Fcodeql?style=for-the-badge&label=CodeQL&labelColor=%23313531&color=%23f1e845">
@@ -41,9 +41,9 @@ const spinojs = require('spino.js')
 
 Name | Syntax | Wiki
 --- | --- | ---
-aes-cbc | `spinojs.aes.cbc()` | [/wiki/AES#cbc](https://github.com/NotReeceHarris/spino.js/wiki/AES#cbc)
-aes-gcm | `spinojs.aes.gcm()` | [/wiki/AES#gcm](https://github.com/NotReeceHarris/spino.js/wiki/AES#gcm)
-aes-ofb | `spinojs.aes.ofb()` | [/wiki/AES#ofb](https://github.com/NotReeceHarris/spino.js/wiki/AES#ofb)
+aes-cbc | `spinojs.aes.cbc.encrypt()` <br> `spinojs.aes.cbc.decrypt()` | [/wiki/AES#cbc](https://github.com/NotReeceHarris/spino.js/wiki/AES#cbc)
+aes-gcm | `spinojs.aes.gcm.encrypt()` <br> `spinojs.aes.gcm.decrypt()` | [/wiki/AES#gcm](https://github.com/NotReeceHarris/spino.js/wiki/AES#gcm)
+aes-ofb | `spinojs.aes.ofb.encrypt()` <br> `spinojs.aes.ofb.decrypt()` | [/wiki/AES#ofb](https://github.com/NotReeceHarris/spino.js/wiki/AES#ofb)
 sha1 | `spinojs.sha.sha1() ` | [/wiki/sha#sha1](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha1)
 sha512 | `spinojs.sha.sha512() ` | [/wiki/sha#sha512](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512)
 sha512-256-rsa | `spinojs.sha.sha512_256rsa() ` | [/wiki/sha#sha512_256rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512_256rsa)
@@ -54,16 +54,15 @@ sha512-256-rsa | `spinojs.sha.sha512_256rsa() ` | [/wiki/sha#sha512_256rsa](http
 
   Name | Syntax | Wiki
 --- | --- | ---
-aes-cbc | `spinojs.aes.cbc()` | [/wiki/AES#cbc](https://github.com/NotReeceHarris/spino.js/wiki/AES#cbc)
-aes-cbc-hmac | `spinojs.aes.cbc_hmac()` | [/wiki/AES#cbc_hmac](https://github.com/NotReeceHarris/spino.js/wiki/AES#cbc_hmac)
-aes-cfb | `spinojs.aes.cfb()` | [/wiki/AES#cfb](https://github.com/NotReeceHarris/spino.js/wiki/AES#cfb)
-aes-cfb1 |  `spinojs.aes.cfb1()` | [/wiki/AES#cfb1](https://github.com/NotReeceHarris/spino.js/wiki/AES#cfb1)
-aes-cfb8 | `spinojs.aes.cfb8()` | [/wiki/AES#cfb8](https://github.com/NotReeceHarris/spino.js/wiki/AES#cfb8)
-aes-ctr | `spinojs.aes.ctr()` | [/wiki/AES#ctr](https://github.com/NotReeceHarris/spino.js/wiki/AES#cbc)
-aes-ecb | `spinojs.aes.ecb()` | [/wiki/AES#ecb](https://github.com/NotReeceHarris/spino.js/wiki/AES#ctr)
-aes-gcm | `spinojs.aes.gcm()` | [/wiki/AES#gcm](https://github.com/NotReeceHarris/spino.js/wiki/AES#gcm)
-aes-ofb | `spinojs.aes.ofb()` | [/wiki/AES#ofb](https://github.com/NotReeceHarris/spino.js/wiki/AES#ofb)
- | | |
+aes-cbc | `spinojs.aes.cbc.encrypt()` <br> `spinojs.aes.cbc.decrypt()` | [/wiki/AES#cbc](https://github.com/NotReeceHarris/spino.js/wiki/AES#cbc)
+aes-cbc-hmac | `spinojs.aes.cbc_hmac.encrypt()` <br> `spinojs.aes.cbc_hmac.decrypt()` | [/wiki/AES#cbc_hmac](https://github.com/NotReeceHarris/spino.js/wiki/AES#cbc_hmac)
+aes-cfb | `spinojs.aes.cfb.encrypt()` <br> `spinojs.aes.decrypt()` | [/wiki/AES#cfb](https://github.com/NotReeceHarris/spino.js/wiki/AES#cfb)
+aes-cfb1 |  `spinojs.aes.cfb1.encrypt()` <br> `spinojs.aes.cfb1.decrypt()` | [/wiki/AES#cfb1](https://github.com/NotReeceHarris/spino.js/wiki/AES#cfb1)
+aes-cfb8 | `spinojs.aes.cfb8.encrypt()` <br> `spinojs.aes.cfb8.decrypt()` | [/wiki/AES#cfb8](https://github.com/NotReeceHarris/spino.js/wiki/AES#cfb8)
+aes-ctr | `spinojs.aes.ctr.encrypt()` <br> `spinojs.aes.ctr.decrypt()` | [/wiki/AES#ctr](https://github.com/NotReeceHarris/spino.js/wiki/AES#cbc)
+aes-ecb | `spinojs.aes.ecb.encrypt()` <br> `spinojs.aes.ecb.decrypt()` | [/wiki/AES#ecb](https://github.com/NotReeceHarris/spino.js/wiki/AES#ctr)
+aes-gcm | `spinojs.aes.gcm.encrypt()` <br> `spinojs.aes.gcm.decrypt()` | [/wiki/AES#gcm](https://github.com/NotReeceHarris/spino.js/wiki/AES#gcm)
+aes-ofb | `spinojs.aes.ofb.encrypt()` <br> `spinojs.aes.ofb.decrypt()` | [/wiki/AES#ofb](https://github.com/NotReeceHarris/spino.js/wiki/AES#ofb)
 sha1 | `spinojs.sha.sha1() ` | [/wiki/sha#sha1](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha1)
 sha1-rsa | `spinojs.sha.sha1rsa() ` | [/wiki/sha#sha1rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha1rsa)
 sha244 | `spinojs.sha.sha244() ` | [/wiki/sha#sha244](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha244)
@@ -83,9 +82,9 @@ sha512-224 | `spinojs.sha.sha512_224() ` | [/wiki/sha#sha512_224](https://github
 sha512-224-rsa | `spinojs.sha.sha512_224rsa() ` | [/wiki/sha#sha512_224rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512_224rsa)
 sha512-256 | `spinojs.sha.sha512_256() ` | [/wiki/sha#sha512_256](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512_256)
 sha512-256-rsa | `spinojs.sha.sha512_256rsa() ` | [/wiki/sha#sha512_256rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512_256rsa)
- | | |
 md5 | `spinojs.md5.md5() ` | [/wiki/md5#md5](https://github.com/NotReeceHarris/spino.js/wiki/md5#md5)
 md5-sha1 | `spinojs.md5.md5sha1() ` | [/wiki/md5#md5_sha1](https://github.com/NotReeceHarris/spino.js/wiki/md5#md5sha1)
+bcrypt | `spinojs.bcrypt.hash()` <br> `spinojs.bcrypt.compare()` | [/wiki/bcrypt](https://github.com/NotReeceHarris/spino.js/wiki/bcrypt)
 
 
 

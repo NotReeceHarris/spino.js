@@ -1,26 +1,15 @@
-const crypto = require('crypto');
-const {default: {algorithm, mode}} = require('cryptian');
+/*
+	Cryptian is only loaded/required when its needed to speed up load time for spino.js libary
+*/
 
 const genkey = (encoding='hex', size=56) => {
-
-	const key = crypto.randomBytes(size);
-	const iv = crypto.randomBytes(8);
-
-	return {
-		[encoding]: {
-			key: key.toString(encoding),
-			iv: iv.toString(encoding)
-		},
-		buffer: {
-			key,
-			iv
-		},
-		key,
-		iv
-	};
+	const keylib = require('../utils/keys');
+	return keylib(size, 8, encoding);
 };
 
 const encrypt = (plaintext, key, iv, encoding='hex') => {
+
+	const {default: {algorithm, mode}} = require('cryptian');
 
 	if (!Buffer.isBuffer(key)) {
 		try {
@@ -49,6 +38,8 @@ const encrypt = (plaintext, key, iv, encoding='hex') => {
 };
 
 const decrypt = (encryptedData, key, encoding='hex') => {
+
+	const {default: {algorithm}} = require('cryptian');
 
 	if (!Buffer.isBuffer(key)) {
 		try {

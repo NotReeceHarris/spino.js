@@ -5,6 +5,7 @@
   "main": "./build/index.js",
   "scripts": {
     "test": "node ./build.js && node ./test.js",
+    "test:performance": "node ./build.js && node ./performance.js",
     "build": "node ./build.js"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/NotReeceHarris/spino.js#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "cryptian": "^0.0.7"
   },
   "devDependencies": {

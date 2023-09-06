@@ -4,5 +4,6 @@ src/
 .gitignore
 build.js
 index.js
+performance.js
 spino-logo.png
 test.js
