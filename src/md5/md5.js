@@ -21,10 +21,10 @@ const md5 = (data, salt=null, encoding='hex') => {
  * @param {string} [encoding='hex'] - The encoding format for the hash result (default is 'hex').
  * @returns {string} The concatenated MD5 and SHA-1 hashes of the input data with optional salt.
  */
-const md5_sha1 = (data, salt=null, encoding='hex') => {
+const sha1 = (data, salt=null, encoding='hex') => {
 	if (Buffer.isBuffer(data)) data.toString(encoding);
 	const md5 = crypto.createHash('md5').update(mix(data, salt)).digest(encoding);
 	return crypto.createHash('sha1').update(md5).digest(encoding);
 };
 
-module.exports = {md5, md5_sha1};
+module.exports = {md5, sha1};

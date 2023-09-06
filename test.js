@@ -255,7 +255,7 @@ const salt = 'seaSalt';
 	const md5 = spinojs.md5;
 
 	console.log('MD5:\t\t', md5.md5(plaintext, salt));
-	console.log('MD5-SHA1:\t', md5.md5_sha1(plaintext, salt));
+	console.log('MD5-SHA1:\t', md5.sha1(plaintext, salt));
 
 })();
 
