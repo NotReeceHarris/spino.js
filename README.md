@@ -32,7 +32,8 @@ const spinojs = require('spino.js')
 - `🧂` **Innovative Salting Algorithm**: Easy and effective protection. [[wiki](https://github.com/NotReeceHarris/spino.js/wiki/salting)]
 - `✅` **Industry-Compliant Algorithms**: Meeting regulatory standards. 
 - `🏎` **Fast and Easy Implementation**: Swift integration. 
-- `👐` **Open-Source**: Collaborative and transparent development. 
+- `👐` **Open-Source**: Collaborative and transparent development.
+- `🥣` **Algorithm mixing**: SImple way to mix algorithms.
 - `🕷` **Vulnerability Monitoring**: Continuous code scrutiny. 
 
 
