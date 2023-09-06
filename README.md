@@ -15,7 +15,7 @@
 </h2>
 
 <br>
-<p>Harnessing the power of <a href="https://nodejs.org/api/crypto.html">crypto</a> and <a href="https://github.com/tugrul/cryptian">cryptian</a> to provide a user-friendly framework. With support for a diverse range of algorithms and industry compliances, it makes encrypting your data straightforward and secure.</p>
+<p>Harness the strength of widely acclaimed and industry-compliant algorithms through a user-friendly API, enabling seamless integration of cryptographically secure encryption and hashing methods.</p>
 
 ##
 
@@ -29,12 +29,13 @@ const spinojs = require('spino.js')
 ## Key Features
 
 - `🔒` **Assured Security**: Prioritizing your data's safety. 
-- `🧂` **Innovative Salting Algorithm**: Easy and effective protection. [[wiki](https://github.com/NotReeceHarris/spino.js/wiki/salting)]
 - `✅` **Industry-Compliant Algorithms**: Meeting regulatory standards. 
 - `🏎` **Fast and Easy Implementation**: Swift integration. 
 - `👐` **Open-Source**: Collaborative and transparent development.
-- `🥣` **Algorithm mixing**: SImple way to mix algorithms. [[wiki](https://github.com/NotReeceHarris/spino.js/wiki/algorithm-mixing)]
 - `🕷` **Vulnerability Monitoring**: Continuous code scrutiny. 
+- `🥣` **Algorithm mixing**: SImple way to mix algorithms. [[wiki](https://github.com/NotReeceHarris/spino.js/wiki/algorithm-mixing)]
+- `🧂` **Innovative Salting Algorithm**: Easy and effective protection. [[wiki](https://github.com/NotReeceHarris/spino.js/wiki/salting)]
+- `🧪` **Experimental Algorithms**: Cryptographically safe unseen algorithms. [[wiki](https://github.com/NotReeceHarris/spino.js/wiki/experimental-algorithms)]
 
 
 ## Supported Algorithms
@@ -43,10 +44,9 @@ Name | Syntax | Wiki
 --- | --- | ---
 aes-cbc | `spinojs.aes.cbc.encrypt()` <br> `spinojs.aes.cbc.decrypt()` | [/wiki/AES#cbc](https://github.com/NotReeceHarris/spino.js/wiki/AES#cbc)
 aes-gcm | `spinojs.aes.gcm.encrypt()` <br> `spinojs.aes.gcm.decrypt()` | [/wiki/AES#gcm](https://github.com/NotReeceHarris/spino.js/wiki/AES#gcm)
-aes-ofb | `spinojs.aes.ofb.encrypt()` <br> `spinojs.aes.ofb.decrypt()` | [/wiki/AES#ofb](https://github.com/NotReeceHarris/spino.js/wiki/AES#ofb)
-sha1 | `spinojs.sha.sha1() ` | [/wiki/sha#sha1](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha1)
 sha512 | `spinojs.sha.sha512() ` | [/wiki/sha#sha512](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512)
 sha512-256-rsa | `spinojs.sha.sha512_256rsa() ` | [/wiki/sha#sha512_256rsa](https://github.com/NotReeceHarris/spino.js/wiki/sha#sha512_256rsa)
+bcrypt | `spinojs.bcrypt.hash()` <br> `spinojs.bcrypt.compare()` | [/wiki/bcrypt](https://github.com/NotReeceHarris/spino.js/wiki/bcrypt)
 
 <details>
 
