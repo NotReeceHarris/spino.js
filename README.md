@@ -15,7 +15,7 @@
 </h2>
 
 <br>
-<p>Harness the strength of widely acclaimed and industry-compliant algorithms through a user-friendly API, enabling seamless integration of cryptographically secure encryption and hashing methods.</p>
+<p>A robust framework that leverages well-established and industry-compliant algorithms via a user-friendly API, facilitating effortless integration of cryptographically secure encryption and hashing techniques.</p>
 
 ##
 

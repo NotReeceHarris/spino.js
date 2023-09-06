@@ -1,7 +1,7 @@
 {
   "name": "spino.js",
   "version": "1.0.4",
-  "description": "Harness the strength of widely acclaimed and industry-compliant algorithms through a user-friendly API, enabling seamless integration of cryptographically secure encryption and hashing methods.",
+  "description": "A robust framework that leverages well-established and industry-compliant algorithms via a user-friendly API, facilitating effortless integration of cryptographically secure encryption and hashing techniques.",
   "main": "./build/index.js",
   "scripts": {
     "test": "node ./build.js && node ./test.js",
