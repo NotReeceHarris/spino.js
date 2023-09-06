@@ -33,7 +33,7 @@ const spinojs = require('spino.js')
 - `✅` **Industry-Compliant Algorithms**: Meeting regulatory standards. 
 - `🏎` **Fast and Easy Implementation**: Swift integration. 
 - `👐` **Open-Source**: Collaborative and transparent development.
-- `🥣` **Algorithm mixing**: SImple way to mix algorithms.
+- `🥣` **Algorithm mixing**: SImple way to mix algorithms. [[wiki](https://github.com/NotReeceHarris/spino.js/wiki/algorithm-mixing)]
 - `🕷` **Vulnerability Monitoring**: Continuous code scrutiny. 
 
 
