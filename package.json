@@ -1,6 +1,6 @@
 {
   "name": "spino.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Harnessing the power of crypto and cryptian to provide a user-friendly framework. With support for a diverse range of algorithms and industry compliances, it makes encrypting your data straightforward and secure.",
   "main": "./build/index.js",
   "scripts": {
