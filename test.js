@@ -282,6 +282,18 @@ const salt = 'seaSalt';
 
 	console.log(hash, await bcrypt.compare(plaintext, hash))
 
+});
+
+// LAB
+(async () => {
+	const lab = spinojs.lab;
+
+	const keys = lab.bloat.genkey();
+	const encrypted = lab.bloat.encrypt(plaintext, keys.key, keys.iv);
+	const decrypted = lab.bloat.decrypt(encrypted, keys.key, keys.iv);
+
+	console.log(encrypted, decrypted)
+
 })();
 
 // eslint-disable-next-line no-unused-vars

@@ -48,9 +48,9 @@ const crypto = require('crypto');
 
 const hashAlgos = {...spinojs.sha, ...spinojs.md5, bcrypt: spinojs.bcrypt};
 const hashTimes = {};
-const unitSize = 10;
+const unitSize = 30;
 
-console.log('Benchmarking hashing algorithms will take approx', Math.round((unitSize * 1000) / 650), 'seconds\n');
+console.log('Benchmarking hashing algorithms will take approx', Math.round((unitSize * 1000) / 650), 'seconds unit size of', unitSize, '\n');
 
 Object.keys(hashAlgos).forEach((algo) => {
 	hashTimes[algo] = [];

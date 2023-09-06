@@ -1,17 +1,4 @@
-const crypto = require('crypto');
-
-/**
- * Generates a seedable pseudorandom integer using HMAC-based SPRNG (Seeded Pseudorandom Number Generator).
- * @param {string} seed - The seed value for generating random numbers.
- * @param {number} [max=1000] - The maximum value for the generated random number (inclusive).
- * @returns {number} A pseudorandom integer between 0 and 'max'.
-*/
-const sprng = (seed, max=1000) => {
-	const hmac = crypto.createHmac('sha256', seed);
-	hmac.update('random-data');
-	const randomBytes = Buffer.from(hmac.digest('hex'), 'hex');
-	return randomBytes.readUInt32BE(0) % (max + 1);
-};
+const {sprng} = require('./prng');
 
 /**
  * Combines two strings by interleaving their characters with seeded random data, using salt.
