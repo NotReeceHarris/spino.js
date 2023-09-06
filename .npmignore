@@ -1,0 +1,8 @@
+.github/
+src/
+.eslintrc.yml
+.gitignore
+build.js
+index.js
+spino-logo.png
+test.js

@@ -13,7 +13,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install
+      - run: npm install --only=dev
+      - run: npm run build
 
   # publish to npm
   publish-npm:
