@@ -29,5 +29,14 @@
     "sha",
     "hashing",
     "encryption"
-  ]
+  ],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "build/"
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  }
 }
